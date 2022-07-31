@@ -1,0 +1,68 @@
+.hello {
+    width: 70%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .textBox {
+        width: 50%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .helloProjectBox {
+        width: 50%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+        .helloProject1, 
+        .helloProject2, 
+        .helloProject3 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            place-self: center;
+            background-color: $background;
+            border: 1px solid rgba($fadedHeader, 0.5);
+            padding: 10px;
+        }
+        .helloProject1 {
+            position: relative;
+            top: 0;
+        }
+        .helloProject2 {
+            position: relative;
+            top: -40px;
+            right: -20px;
+            background: linear-gradient(top, $backgroundAccent 60%, $fadedHeader 30%, $backgroundAccent 10%);
+        }
+        .helloProject3 {
+            position: relative;
+            top: -80px;
+            right: -40px;
+            background: linear-gradient(top, $backgroundAccent 60%, $fadedHeader 45%, $backgroundAccent 5%);
+        }
+        .projectTitle {
+            display: flex;
+            justify-content: space-between;
+            h5 {
+                color: $underScore;
+            }
+            p {
+                color: $fadedHeader;
+            }
+        }
+        a {
+            background-color: $underScore;
+            color: $background;
+        }
+    }
+}
+
+

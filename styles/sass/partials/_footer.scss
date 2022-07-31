@@ -1,0 +1,18 @@
+footer {
+    position: sticky;
+    bottom: 0;
+    border: 1px solid rgba($fadedHeader, 0.7);
+    padding: 10px 0;
+    background-color: $backgroundAccent;
+    display: flex;
+    justify-content: space-between;
+    .footerFindMe {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+    }
+    .footerText {
+        padding-right: 20px;
+    }
+}

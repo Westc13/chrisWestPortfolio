@@ -1,0 +1,26 @@
+.aboutMe {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    color: $highlightHeader;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $background;
+    border: 1px solid rgba($fadedHeader, 0.7);
+    padding: 20px;
+}
+.skills {
+    width: 45%;
+    height: 80vh;
+}
+
+.profile {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.intro {
+    align-self: center;
+    margin-left: 10px;
+    line-height: 1.2rem;
+}

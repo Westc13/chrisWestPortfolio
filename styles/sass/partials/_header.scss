@@ -1,0 +1,15 @@
+.navTag {
+    display: flex;
+    justify-content: left;
+    background-color: $background;
+    text-align: center;
+    li {
+        padding: 10px 0;
+        width: 175px;
+        color: $fadedHeader;
+        a:hover,:focus,:active {
+            border-top: 1px solid $underScore;
+            color: $underScore;
+        }
+    }
+}
