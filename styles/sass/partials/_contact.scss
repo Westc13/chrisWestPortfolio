@@ -1,6 +1,11 @@
+.getInTouch {
+    height: 100vh;
+    h2 {
+        font-size: 1.5rem;
+    }
+}
 .contact {
     width: 90%;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -41,11 +46,22 @@ aside {
     height: 350px;
     background-color: $background;
     padding: 10px;
+    
     ol {
         color: $highlightHeader;
     }
     article {
         margin-left: 10px;
+        //* solution for text breaking out of container, learned from https: //css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
         p {
             display: inline;
         }

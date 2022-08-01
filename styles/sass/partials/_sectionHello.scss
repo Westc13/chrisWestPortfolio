@@ -3,11 +3,9 @@
     margin: 0 auto;
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     .textBox {
         width: 50%;
-        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -40,13 +38,13 @@
             position: relative;
             top: -40px;
             right: -20px;
-            background: linear-gradient(top, $backgroundAccent 60%, $fadedHeader 30%, $backgroundAccent 10%);
+            background: linear-gradient(top, $backgroundAccent 55%, $fadedHeader 35%, $backgroundAccent 10%);
         }
         .helloProject3 {
             position: relative;
             top: -80px;
             right: -40px;
-            background: linear-gradient(top, $backgroundAccent 60%, $fadedHeader 45%, $backgroundAccent 5%);
+            background: linear-gradient(top, $backgroundAccent 60%, $fadedHeader 35%, $backgroundAccent 5%);
         }
         .projectTitle {
             display: flex;

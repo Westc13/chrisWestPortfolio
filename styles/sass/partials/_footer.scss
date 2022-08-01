@@ -7,10 +7,13 @@ footer {
     display: flex;
     justify-content: space-between;
     .footerFindMe {
-        width: 30%;
+        width: 60%;
         display: flex;
-        justify-content: space-between;
+        justify-content: left;
         padding-left: 20px;
+        p {
+            padding-right: 10px;
+        }
     }
     .footerText {
         padding-right: 20px;
