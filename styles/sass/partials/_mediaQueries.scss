@@ -51,7 +51,12 @@
 }
 
 @media (max-width: 680px){
-    //hamberger menu for nav bar
+    .burgerContainer {
+        display: block;
+    }
+    .navTag {
+        display: none;
+    }
 }
 
 @media (max-width: 390px) {

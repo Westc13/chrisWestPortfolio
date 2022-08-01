@@ -1,0 +1,78 @@
+// learned from CodePen.io https: //codepen.io/sitanotern1337/pen/xyQppZ?editors=0110
+.navBar {
+    background-color: $background;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.navBar ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 50%;
+    margin: 0;
+}
+
+.navBar li {
+    display: block;
+    margin: 0;
+    padding: 50px 50px;
+    width: 100%;
+}
+.navBar li:hover {
+    cursor: pointer;
+    background-color: $backgroundAccent;
+
+}
+.navBar li a {
+    color: $fadedHeader;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.navBar li a:hover {
+    color: $underScore;
+}
+
+
+.hamburger {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+    float: left;
+    transition: opacity .3s;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.hamburger .line{
+    width: 50px;
+    height: 5px;
+    background-color: $background;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    background-color: $underScore;
+}
+
+.hamburger.isactive .line:nth-child(2){
+    opacity: 0;
+}
+.hamburger.isactive .line:nth-child(1){
+    transform: translateY(13px) rotate(45deg);
+}
+.hamburger.isactive .line:nth-child(3){
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+
+.navBar.active {
+    display: block;
+    animation: fade .5s;
+}
+    
+@keyframes fade {
+    from{transform: translateX(-200px); opacity: 0;}
+    to {transform: translateX(0px); opacity: 1}
+}

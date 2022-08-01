@@ -347,6 +347,10 @@ body {
   color: #FEA55F;
 }
 
+.burgerContainer {
+  display: none;
+}
+
 .hello {
   width: 70%;
   margin: 0 auto;
@@ -648,6 +652,113 @@ footer .footerText {
   padding-right: 20px;
 }
 
+.navBar {
+  background-color: #011627;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+.navBar ul {
+  overflow: hidden;
+  list-style-type: none;
+  padding-top: 50%;
+  margin: 0;
+}
+
+.navBar li {
+  display: block;
+  margin: 0;
+  padding: 50px 50px;
+  width: 100%;
+}
+
+.navBar li:hover {
+  cursor: pointer;
+  background-color: #1E2D3D;
+}
+
+.navBar li a {
+  color: #607B96;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.navBar li a:hover {
+  color: #FEA55F;
+}
+
+.hamburger {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 0;
+  float: left;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.hamburger .line {
+  width: 50px;
+  height: 5px;
+  background-color: #011627;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  background-color: #FEA55F;
+}
+
+.hamburger.isactive .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.isactive .line:nth-child(1) {
+  -webkit-transform: translateY(13px) rotate(45deg);
+          transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.isactive .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+          transform: translateY(-13px) rotate(-45deg);
+}
+
+.navBar.active {
+  display: block;
+  -webkit-animation: fade 0.5s;
+          animation: fade 0.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
 @media (max-width: 860px) {
   .hello {
     -webkit-box-orient: vertical;
@@ -713,6 +824,14 @@ footer .footerText {
   footer .footerText {
     padding-right: 0;
     text-align: center;
+  }
+}
+@media (max-width: 680px) {
+  .burgerContainer {
+    display: block;
+  }
+  .navTag {
+    display: none;
   }
 }
 @media (max-width: 390px) {
