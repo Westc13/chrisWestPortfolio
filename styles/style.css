@@ -475,10 +475,11 @@ body {
   line-height: 1.2rem;
 }
 
-.projects {
+.slideshowContainer {
+  height: 100vh;
+  position: relative;
   -ms-flex-item-align: center;
       align-self: center;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,27 +490,76 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  background-color: #1E2D3D;
 }
 
-.projects h2 {
+.slideshowContainer h2 {
   font-size: 1.5rem;
 }
 
-.projectBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-.projectBox .project1, .projectBox .project2, .projectBox .project3 {
-  width: 30%;
+.mySlides {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: none;
   background-color: #011627;
-  border: 1px solid rgba(30, 45, 61, 0.7);
-  padding: 10px;
+  padding: 30px;
 }
-.projectBox .project1 .projectTitle, .projectBox .project2 .projectTitle, .projectBox .project3 .projectTitle {
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -10px;
+  padding: 20px;
+  color: #E5E9F0;
+  background-color: #011627;
+  font-weight: bold;
+  font-size: 1rem;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.prev:focus,
+.next:hover,
+.next:focus {
+  background-color: #FEA55F;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.mySlides .projectTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,22 +567,27 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.projectBox .project1 .projectTitle h5, .projectBox .project2 .projectTitle h5, .projectBox .project3 .projectTitle h5 {
+.mySlides h5 {
   color: #FEA55F;
 }
-.projectBox .project1 .projectTitle p, .projectBox .project2 .projectTitle p, .projectBox .project3 .projectTitle p {
+.mySlides p {
+  margin: 10px 0;
   color: #607B96;
+  line-height: 1.2rem;
 }
-.projectBox .project1 a, .projectBox .project2 a, .projectBox .project3 a {
+.mySlides a {
   background-color: #FEA55F;
   color: #011627;
   margin: 0 auto;
+  padding: 5px;
 }
 
 .getInTouch {
-  height: 100vh;
+  background-color: #011627;
+  min-height: 100vh;
 }
 .getInTouch h2 {
+  padding-top: 50px;
   font-size: 1.5rem;
 }
 
@@ -732,19 +787,6 @@ footer .footerText {
   display: block;
   -webkit-animation: fade 0.5s;
           animation: fade 0.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    -webkit-transform: translateX(-200px);
-            transform: translateX(-200px);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
 }
 
 @keyframes fade {

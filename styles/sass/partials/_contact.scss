@@ -1,6 +1,8 @@
 .getInTouch {
-    height: 100vh;
+    background-color: $background;
+    min-height: 100vh;
     h2 {
+        padding-top: 50px;
         font-size: 1.5rem;
     }
 }
