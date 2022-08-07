@@ -9,6 +9,7 @@ hamburger.addEventListener('click', function () {
 });
 
 // Project slides carousel
+// learned from https://www.w3schools.com/howto/howto_js_slideshow.asp
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -32,35 +33,48 @@ function showSlides(n) {
 }
 
 
-// Typewriter effect learned from codepen.io
-// https://codepen.io/Danielgroen/pen/VeRPOq
-// document.addEventListener('DOMContentLoaded', function (event) {
-//     const dataText = [
-//         'Curious.', 'Creative.', 'Confident.', 'Passionate.', 'Tenacious.'
-//     ];
-//     function typeWriter(text, i, fnCallback) {
-//         if (i < (text.length)) {
-//             document.querySelector('h2').innerText = text.substring(0, i + 1) + `<span aria-hidden='true'></span>`;
+// Typerwriter effect learned from youtube
+// https://www.youtube.com/watch?v=9T4YTUeDgwU&t=8s
+function typeWriterEffect() {
+    const words = ['creative', 'passionate', 'curious', 'tenacious', 'articulate'];
 
-//             setTimeout(function () {
-//                 typeWriter(text, i + 1, fnCallback)
-//             }, 100);
-            
-//         } else if (typeOf fnCallback == 'function') {
-//     setTimeout(fnCallback, 700);
-//         }
-//     }
-// function startTextAnimation(i) {
-//     if (typeof dataText[i] == 'undefined') {
-//         setTimeout(function () {
-//             startTextAnimation(0);
-//         }, 20000);
-//     }
-//     if (i < dataText[i].length) {
-//         typeWriter(dataText[i], 0, function () {
-//             startTextAnimation(i + 1);
-//         });
-//     }
-// }
-// startTextAnimation(0);
-// });
+    let wordCount = 0;
+    let letterCount = 0;
+
+    let currentText = '';
+    let currentWord = '';
+
+    let timeOut = 400;
+    
+    let isDeleting = false;
+
+    function type() {
+        if (wordCount === words.length) {
+            wordCount = 0;
+        }
+        currentWord = words[wordCount];
+
+        if (isDeleting) {
+            currentText = currentWord.slice(0, --letterCount);
+        } else {
+            currentText = currentWord.slice(0, ++letterCount);
+        }
+
+        document.querySelector('.typewrite').textContent = currentText;
+
+        timeOut = isDeleting ? 200 : 400;
+
+        if (!isDeleting && currentText.length === currentWord.length) {
+            timeOut = 2000;
+            isDeleting = true;
+        } else if (isDeleting && currentText.length === 0) {
+            timeOut = 1000;
+            isDeleting = false;
+            wordCount++;
+        }
+        setTimeout(type, timeOut);
+    }
+    type();
+}
+typeWriterEffect();
+

@@ -8,8 +8,75 @@
         width: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
     }
+
+    // learned from codepen.io
+    // https://codepen.io/denic/pen/GRoOxbM
+
+    .typing {
+        width: 100%;
+        animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        font-size: 1rem;
+        margin-bottom: 50px;
+        h2 {
+            font-size: 3rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+    }
+
+    @keyframes blinking {
+        50% {
+            border-right-color: transparent;
+        }
+    }
+
+    // Continue Typewriter
+
+    .continue {
+        display: flex;
+        align-items: center;
+        .lead {
+            font-size: 1.5rem;
+        }
+    }
+
+    .typewrite {
+        position: relative;
+        font-size: 2rem;
+        color: $underScore;
+    }
+
+    .typewrite::after {
+        content: '';
+        width: ipx;
+        border-right: 2px solid $highlightHeader;
+        height: 100%;
+        margin-left: 10px;
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        
+    }
+
     .helloProjectBox {
         width: 50%;
         padding: 0 15px;
@@ -19,9 +86,9 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        
-        .helloProject1, 
-        .helloProject2, 
+
+        .helloProject1,
+        .helloProject2,
         .helloProject3 {
             grid-column: 1 / 3;
             grid-row: 1 / 3;

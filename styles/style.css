@@ -371,9 +371,86 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hello .typing {
+  width: 100%;
+  -webkit-animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
+          animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+.hello .typing h2 {
+  font-size: 3rem;
+}
+.hello .typing h3 {
+  font-size: 1.5rem;
+}
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blinking {
+  50% {
+    border-right-color: transparent;
+  }
+}
+@keyframes blinking {
+  50% {
+    border-right-color: transparent;
+  }
+}
+.hello .continue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hello .continue .lead {
+  font-size: 1.5rem;
+}
+.hello .typewrite {
+  position: relative;
+  font-size: 2rem;
+  color: #FEA55F;
+}
+.hello .typewrite::after {
+  content: "";
+  width: ipx;
+  border-right: 2px solid #E5E9F0;
+  height: 100%;
+  margin-left: 10px;
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .hello .helloProjectBox {
   width: 50%;
