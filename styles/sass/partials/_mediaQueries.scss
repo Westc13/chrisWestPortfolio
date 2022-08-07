@@ -60,11 +60,15 @@
     .navTag {
         display: none;
     }
+    .hello {
+        height: auto;
+    }
 }
 
 @media (max-width: 390px) {
-    .helloProjectBox{
-        transform: translateX(-20%);
+    .hello .helloProjectBox .helloProject2, 
+    .hello .helloProjectBox .helloProject3 {
+        right: 0;
     }
     .prev, .next{
         background-color: transparent;

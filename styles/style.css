@@ -256,7 +256,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  color: #4D5BCE;
+  color: #596aea;
 }
 
 h5 {
@@ -271,13 +271,13 @@ p {
 
 span {
   display: block;
-  color: rgba(77, 91, 206, 0.7);
+  color: rgba(89, 106, 234, 0.7);
 }
 
 em {
   display: inline;
   border-style: none;
-  color: rgba(77, 91, 206, 0.7);
+  color: rgba(89, 106, 234, 0.7);
 }
 
 ul, ol {
@@ -419,16 +419,7 @@ body {
 .hello .helloProjectBox {
   width: 50%;
   padding: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -498,7 +489,7 @@ body {
 
 .skills {
   width: 45%;
-  height: 80vh;
+  padding: 20px 0;
 }
 
 .profile {
@@ -613,7 +604,7 @@ body {
 }
 .mySlides p {
   margin: 10px 0;
-  color: #607B96;
+  color: #E5E9F0;
   line-height: 1.2rem;
 }
 .mySlides a {
@@ -789,7 +780,8 @@ footer .footerText {
   margin-left: 15px;
   margin-bottom: 15px;
   padding: 0;
-  float: left;
+  position: absolute;
+  left: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
@@ -919,11 +911,14 @@ footer .footerText {
   .navTag {
     display: none;
   }
+  .hello {
+    height: auto;
+  }
 }
 @media (max-width: 390px) {
-  .helloProjectBox {
-    -webkit-transform: translateX(-20%);
-            transform: translateX(-20%);
+  .hello .helloProjectBox .helloProject2,
+.hello .helloProjectBox .helloProject3 {
+    right: 0;
   }
   .prev, .next {
     background-color: transparent;
