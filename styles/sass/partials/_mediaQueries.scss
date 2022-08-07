@@ -1,6 +1,7 @@
 // 860px/740px/680px/390px
 @media (max-width: 860px) {
     .hello {
+        height: auto;
         flex-direction: column;
         .textBox {
             width: 100%;
@@ -59,9 +60,6 @@
     }
     .navTag {
         display: none;
-    }
-    .hello {
-        height: auto;
     }
 }
 
