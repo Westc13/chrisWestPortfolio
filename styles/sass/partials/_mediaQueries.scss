@@ -13,11 +13,10 @@
     }
     .aboutMe {
         flex-direction: column;
+        height: auto;
     }
     .skills, .profile {
         width: 100%;
-        height: auto;
-        overflow: scroll;
     }    
 }
 
@@ -51,6 +50,10 @@
 }
 
 @media (max-width: 680px){
+    .bodyWrapper {
+        width: 100%;
+        margin-top: 0;
+    }
     .burgerContainer {
         display: block;
     }
@@ -60,12 +63,11 @@
 }
 
 @media (max-width: 390px) {
-    .bodyWrapper {
-        width: 100%;
-        margin-top: 0;
+    .helloProjectBox{
+        transform: translateX(-20%);
     }
-    article {
-        overflow: scroll;
+    .prev, .next{
+        background-color: transparent;
     }
     .footerFindMe {
         flex-direction: column;

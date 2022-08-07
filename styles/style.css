@@ -375,42 +375,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.hello .typing {
-  width: 100%;
-  -webkit-animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
-          animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  overflow-wrap: break-word;
-  font-size: 1rem;
-  margin-bottom: 50px;
-}
-.hello .typing h2 {
-  font-size: 3rem;
-}
-.hello .typing h3 {
-  font-size: 1.5rem;
-}
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-@-webkit-keyframes blinking {
-  50% {
-    border-right-color: transparent;
-  }
-}
-@keyframes blinking {
-  50% {
-    border-right-color: transparent;
-  }
-}
 .hello .continue {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,11 +384,11 @@ body {
           align-items: center;
 }
 .hello .continue .lead {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .hello .typewrite {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #FEA55F;
 }
 .hello .typewrite::after {
@@ -585,7 +549,7 @@ body {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 55%;
   width: auto;
   margin-top: -10px;
   padding: 20px;
@@ -898,11 +862,10 @@ footer .footerText {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: auto;
   }
   .skills, .profile {
     width: 100%;
-    height: auto;
-    overflow: scroll;
   }
 }
 @media (max-width: 740px) {
@@ -946,6 +909,10 @@ footer .footerText {
   }
 }
 @media (max-width: 680px) {
+  .bodyWrapper {
+    width: 100%;
+    margin-top: 0;
+  }
   .burgerContainer {
     display: block;
   }
@@ -954,12 +921,12 @@ footer .footerText {
   }
 }
 @media (max-width: 390px) {
-  .bodyWrapper {
-    width: 100%;
-    margin-top: 0;
+  .helloProjectBox {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
   }
-  article {
-    overflow: scroll;
+  .prev, .next {
+    background-color: transparent;
   }
   .footerFindMe {
     -webkit-box-orient: vertical;

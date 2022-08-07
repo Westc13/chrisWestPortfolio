@@ -14,33 +14,33 @@
     // learned from codepen.io
     // https://codepen.io/denic/pen/GRoOxbM
 
-    .typing {
-        width: 100%;
-        animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
-        white-space: nowrap;
-        overflow: hidden;
-        overflow-wrap: break-word;
-        font-size: 1rem;
-        margin-bottom: 50px;
-        h2 {
-            font-size: 3rem;
-        }
-        h3 {
-            font-size: 1.5rem;
-        }
-    }
+    // .typing {
+    //     width: 100%;
+    //     animation: typing 2s steps(22), blinking 0.5s step-end infinite alternate;
+    //     white-space: nowrap;
+    //     overflow: hidden;
+    //     overflow-wrap: break-word;
+    //     font-size: 1rem;
+    //     margin-bottom: 50px;
+    //     h2 {
+    //         font-size: 3rem;
+    //     }
+    //     h3 {
+    //         font-size: 1.5rem;
+    //     }
+    // }
 
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-    }
+    // @keyframes typing {
+    //     from {
+    //         width: 0;
+    //     }
+    // }
 
-    @keyframes blinking {
-        50% {
-            border-right-color: transparent;
-        }
-    }
+    // @keyframes blinking {
+    //     50% {
+    //         border-right-color: transparent;
+    //     }
+    // }
 
     // Continue Typewriter
 
@@ -48,13 +48,13 @@
         display: flex;
         align-items: center;
         .lead {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     }
 
     .typewrite {
         position: relative;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: $underScore;
     }
 
