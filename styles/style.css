@@ -310,6 +310,10 @@ i {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../assets/motherboard1.jpg");
   background-size: cover;
@@ -325,9 +329,14 @@ body {
   margin: 0 auto;
   background-color: #1E2D3D;
   margin-top: 20px;
+  position: relative;
 }
 
-.navTag {
+.logo {
+  background-color: #1E2D3D;
+}
+
+.navTag ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,12 +346,14 @@ body {
   background-color: #011627;
   text-align: center;
 }
-.navTag li {
+.navTag ul li {
   padding: 10px 0;
   width: 175px;
   color: #607B96;
 }
-.navTag li a:hover, .navTag li :focus, .navTag li :active {
+.navTag ul li a:hover,
+.navTag ul li :focus,
+.navTag ul li :active {
   border-top: 1px solid #FEA55F;
   color: #FEA55F;
 }
@@ -739,51 +750,53 @@ footer .footerText {
   padding-right: 20px;
 }
 
-.navBar {
+.mobileNavBar {
   background-color: #011627;
   width: 100%;
   height: 100vh;
-  display: none;
 }
 
-.navBar ul {
-  overflow: hidden;
+.mobileNavBar ul {
   list-style-type: none;
-  padding-top: 50%;
+  padding-top: 75px;
   margin: 0;
 }
 
-.navBar li {
+.mobileNavBar li a {
   display: block;
   margin: 0;
   padding: 50px 50px;
   width: 100%;
 }
 
-.navBar li:hover {
+.mobileNavBar li a:hover {
   cursor: pointer;
   background-color: #1E2D3D;
 }
 
-.navBar li a {
+.mobileNavBar li a {
   color: #607B96;
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.navBar li a:hover {
+.mobileNavBar li a:hover {
   color: #FEA55F;
 }
 
 .hamburger {
-  margin-left: 15px;
-  margin-bottom: 15px;
-  padding: 0;
+  margin: 20px;
+  display: none;
+  padding: 10px;
   position: absolute;
   left: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  background-color: rgba(254, 165, 95, 0.8);
+  border-radius: 50%;
+  -webkit-box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+          box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .hamburger:hover {
@@ -799,7 +812,6 @@ footer .footerText {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
-  background-color: #FEA55F;
 }
 
 .hamburger.isactive .line:nth-child(2) {
@@ -816,7 +828,7 @@ footer .footerText {
           transform: translateY(-13px) rotate(-45deg);
 }
 
-.navBar.active {
+.burgerContainer.active {
   display: block;
   -webkit-animation: fade 0.5s;
           animation: fade 0.5s;
@@ -857,7 +869,8 @@ footer .footerText {
             flex-direction: column;
     height: auto;
   }
-  .skills, .profile {
+  .skills,
+.profile {
     width: 100%;
   }
 }
@@ -868,7 +881,9 @@ footer .footerText {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .projectBox .project1, .projectBox .project2, .projectBox .project3 {
+  .projectBox .project1,
+.projectBox .project2,
+.projectBox .project3 {
     width: 80%;
     -ms-flex-item-align: center;
         align-self: center;
@@ -880,7 +895,8 @@ footer .footerText {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .contact form, .contact aside {
+  .contact form,
+.contact aside {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -906,7 +922,12 @@ footer .footerText {
     width: 100%;
     margin-top: 0;
   }
-  .burgerContainer {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .hamburger {
     display: block;
   }
   .navTag {
@@ -914,11 +935,15 @@ footer .footerText {
   }
 }
 @media (max-width: 390px) {
+  .hello {
+    width: 90%;
+  }
   .hello .helloProjectBox .helloProject2,
 .hello .helloProjectBox .helloProject3 {
     right: 0;
   }
-  .prev, .next {
+  .prev,
+.next {
     background-color: transparent;
   }
   .footerFindMe {

@@ -1,80 +1,84 @@
-// learned from codepen.io 
+// learned from codepen.io
 //https://codepen.io/sitanotern1337/pen/xyQppZ?editors=0110
-.navBar {
-    background-color: $background;
-    width: 100%;
-    height: 100vh;
-    display: none;
+.mobileNavBar {
+  background-color: $background;
+  width: 100%;
+  height: 100vh;
 }
-.navBar ul {
-    overflow: hidden;
-    list-style-type: none;
-    padding-top: 50%;
-    margin: 0;
+.mobileNavBar ul {
+  list-style-type: none;
+  padding-top: 75px;
+  margin: 0;
 }
 
-.navBar li {
-    display: block;
-    margin: 0;
-    padding: 50px 50px;
-    width: 100%;
+.mobileNavBar li a {
+  display: block;
+  margin: 0;
+  padding: 50px 50px;
+  width: 100%;
 }
-.navBar li:hover {
-    cursor: pointer;
-    background-color: $backgroundAccent;
-
+.mobileNavBar li a:hover {
+  cursor: pointer;
+  background-color: $backgroundAccent;
 }
-.navBar li a {
-    color: $fadedHeader;
-    text-decoration: none;
-    transition: all 0.5s;
+.mobileNavBar li a {
+  color: $fadedHeader;
+  text-decoration: none;
+  transition: all 0.5s;
 }
-.navBar li a:hover {
-    color: $underScore;
+.mobileNavBar li a:hover {
+  color: $underScore;
 }
-
 
 .hamburger {
-    margin-left: 15px;
-    margin-bottom: 15px;
-    padding: 0;
-    position: absolute;
-    left: 0;
-    transition: opacity .3s;
+  margin: 20px;
+  display: none;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  transition: opacity 0.3s;
+  background-color: rgba($underScore, 0.8);
+  border-radius: 50%;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
 .hamburger:hover {
-    cursor: pointer;
-    opacity: .5;
+  cursor: pointer;
+  opacity: 0.5;
 }
 
-.hamburger .line{
-    width: 50px;
-    height: 5px;
-    background-color: $background;
-    margin: 8px auto;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
-    background-color: $underScore;
+.hamburger .line {
+  width: 50px;
+  height: 5px;
+  background-color: $background;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
-.hamburger.isactive .line:nth-child(2){
-    opacity: 0;
+.hamburger.isactive .line:nth-child(2) {
+  opacity: 0;
 }
-.hamburger.isactive .line:nth-child(1){
-    transform: translateY(13px) rotate(45deg);
+.hamburger.isactive .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
 }
-.hamburger.isactive .line:nth-child(3){
-    transform: translateY(-13px) rotate(-45deg);
+.hamburger.isactive .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
 }
 
-
-.navBar.active {
-    display: block;
-    animation: fade .5s;
+.burgerContainer.active {
+  display: block;
+  animation: fade 0.5s;
 }
-    
+
 @keyframes fade {
-    from{transform: translateX(-200px); opacity: 0;}
-    to {transform: translateX(0px); opacity: 1;}
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }

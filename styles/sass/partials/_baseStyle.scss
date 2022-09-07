@@ -1,26 +1,28 @@
 * {
-    padding: 0;
-    margin: 0;
-    border: none;
-    box-sizing: border-box;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
-    background-image: url('../assets/motherboard1.jpg');
-    //* Image by rawpixel.com/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-color: $background;
+  background-image: url("../assets/motherboard1.jpg");
+  //* Image by rawpixel.com/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: $background;
 }
 
 .bodyWrapper {
-    max-width: 1280px;
-    width: 85%;
-    margin: 0 auto;
-    background-color: $backgroundAccent;
-    margin-top: 20px;
+  max-width: 1280px;
+  width: 85%;
+  margin: 0 auto;
+  background-color: $backgroundAccent;
+  margin-top: 20px;
+  position: relative;
 }
-
