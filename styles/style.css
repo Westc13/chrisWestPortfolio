@@ -546,9 +546,11 @@ body {
   display: none;
   background-color: #011627;
   padding: 30px;
+  margin: 30px;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 55%;
@@ -628,6 +630,7 @@ body {
 .getInTouch {
   background-color: #011627;
   min-height: 100vh;
+  padding-top: 150px;
 }
 .getInTouch h2 {
   padding-top: 50px;
@@ -758,7 +761,7 @@ footer .footerText {
 
 .mobileNavBar ul {
   list-style-type: none;
-  padding-top: 75px;
+  padding-top: 100px;
   margin: 0;
 }
 
@@ -769,9 +772,11 @@ footer .footerText {
   width: 100%;
 }
 
-.mobileNavBar li a:hover {
+.mobileNavBar li a:hover,
+.mobileNavBar li a:focus {
   cursor: pointer;
   background-color: #1E2D3D;
+  color: #FEA55F;
 }
 
 .mobileNavBar li a {
@@ -779,10 +784,6 @@ footer .footerText {
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.mobileNavBar li a:hover {
-  color: #FEA55F;
 }
 
 .hamburger {
