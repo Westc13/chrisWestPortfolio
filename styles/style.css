@@ -544,11 +544,21 @@ body {
 }
 
 .mySlides {
+  position: relative;
   -ms-flex-item-align: center;
       align-self: center;
   display: none;
   background-color: #011627;
   padding: 30px;
+  margin: 30px;
+}
+.mySlides .projectTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .prev,
@@ -606,26 +616,17 @@ body {
     opacity: 1;
   }
 }
-.mySlides {
-  position: relative;
-}
-.mySlides .projectTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.mySlides h5 {
+h5 {
   color: #FEA55F;
 }
-.mySlides p {
+
+p {
   margin: 10px 0;
   color: #E5E9F0;
   line-height: 1.2rem;
 }
-.mySlides a {
+
+a {
   background-color: #FEA55F;
   color: #011627;
   margin: 0 auto;
@@ -673,6 +674,7 @@ body {
 .getInTouch {
   background-color: #011627;
   min-height: 100vh;
+  padding-top: 150px;
 }
 .getInTouch h2 {
   padding-top: 50px;
@@ -803,7 +805,7 @@ footer .footerText {
 
 .mobileNavBar ul {
   list-style-type: none;
-  padding-top: 75px;
+  padding-top: 100px;
   margin: 0;
 }
 
@@ -814,9 +816,11 @@ footer .footerText {
   width: 100%;
 }
 
-.mobileNavBar li a:hover {
+.mobileNavBar li a:hover,
+.mobileNavBar li a:focus {
   cursor: pointer;
   background-color: #1E2D3D;
+  color: #FEA55F;
 }
 
 .mobileNavBar li a {
@@ -824,10 +828,6 @@ footer .footerText {
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.mobileNavBar li a:hover {
-  color: #FEA55F;
 }
 
 .hamburger {

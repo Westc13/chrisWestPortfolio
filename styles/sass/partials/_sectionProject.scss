@@ -16,10 +16,16 @@
 }
 
 .mySlides {
+  position: relative;
+  .projectTitle {
+    display: flex;
+    justify-content: space-between;
+  }
   align-self: center;
   display: none;
   background-color: $background;
   padding: 30px;
+  margin: 30px;
 }
 
 .prev,
@@ -63,26 +69,19 @@
   }
 }
 
-.mySlides {
-  position: relative;
-  .projectTitle {
-    display: flex;
-    justify-content: space-between;
-  }
-  h5 {
-    color: $underScore;
-  }
-  p {
-    margin: 10px 0;
-    color: $highlightHeader;
-    line-height: 1.2rem;
-  }
-  a {
-    background-color: $underScore;
-    color: $background;
-    margin: 0 auto;
-    padding: 5px;
-  }
+h5 {
+  color: $underScore;
+}
+p {
+  margin: 10px 0;
+  color: $highlightHeader;
+  line-height: 1.2rem;
+}
+a {
+  background-color: $underScore;
+  color: $background;
+  margin: 0 auto;
+  padding: 5px;
 }
 .projectSkills {
   width: 350px;

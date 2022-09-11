@@ -1,84 +1,84 @@
 .getInTouch {
-    background-color: $background;
-    min-height: 100vh;
-    h2 {
-        padding-top: 50px;
-        font-size: 1.5rem;
-    }
+  background-color: $background;
+  min-height: 100vh;
+  padding-top: 150px;
+  h2 {
+    padding-top: 50px;
+    font-size: 1.5rem;
+  }
 }
 .contact {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 form {
-    width: 50%;
-    label {
-        color: $highlightHeader;
-        padding: 10px 0;
-    }
-    input,
-    textarea {
-        padding: 10px 0 10px 5px;
-    }
+  width: 50%;
+  label {
+    color: $highlightHeader;
+    padding: 10px 0;
+  }
+  input,
+  textarea {
+    padding: 10px 0 10px 5px;
+  }
 
-    button {
-        margin-left: 15px;
-        padding: 10px;
-        background-color: $underScore;
-        color: $background;
-        :hover,
-        :focus {
-            background-color: $background;
-            color: $underScore;
-        }
+  button {
+    margin-left: 15px;
+    padding: 10px;
+    background-color: $underScore;
+    color: $background;
+    :hover,
+    :focus {
+      background-color: $background;
+      color: $underScore;
     }
+  }
 }
 
 fieldset {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 aside {
-    display: flex;
-    width: 50%;
-    height: 350px;
-    background-color: $background;
-    padding: 10px;
-    
-    ol {
-        color: $highlightHeader;
-    }
-    article {
-        margin-left: 10px;
-        //* solution for text breaking out of container, learned from https: //css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        -ms-word-break: break-all;
-        word-break: break-all;
-        word-break: break-word;
-        -ms-hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-        p {
-            display: inline;
-        }
-    }
-    .const {
-        color: h3;
-    }
-    .htmlEl {
-        color: $https;
-    }
-    .jsMethod {
-        color: $links;
-    }
-    .key {
-        color: $accentFont;
-    }
+  display: flex;
+  width: 50%;
+  height: 350px;
+  background-color: $background;
+  padding: 10px;
 
+  ol {
+    color: $highlightHeader;
+  }
+  article {
+    margin-left: 10px;
+    //* solution for text breaking out of container, learned from https: //css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    p {
+      display: inline;
+    }
+  }
+  .const {
+    color: h3;
+  }
+  .htmlEl {
+    color: $https;
+  }
+  .jsMethod {
+    color: $links;
+  }
+  .key {
+    color: $accentFont;
+  }
 }

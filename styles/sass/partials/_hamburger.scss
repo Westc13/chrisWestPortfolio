@@ -7,7 +7,7 @@
 }
 .mobileNavBar ul {
   list-style-type: none;
-  padding-top: 75px;
+  padding-top: 100px;
   margin: 0;
 }
 
@@ -17,17 +17,16 @@
   padding: 50px 50px;
   width: 100%;
 }
-.mobileNavBar li a:hover {
+.mobileNavBar li a:hover,
+.mobileNavBar li a:focus {
   cursor: pointer;
   background-color: $backgroundAccent;
+  color: $underScore;
 }
 .mobileNavBar li a {
   color: $fadedHeader;
   text-decoration: none;
   transition: all 0.5s;
-}
-.mobileNavBar li a:hover {
-  color: $underScore;
 }
 
 .hamburger {
