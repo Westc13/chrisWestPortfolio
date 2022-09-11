@@ -16,11 +16,30 @@
 }
 
 .mySlides {
+  position: relative;
   align-self: center;
   display: none;
   background-color: $background;
   padding: 30px;
   margin: 30px;
+  .projectTitle {
+    display: flex;
+    justify-content: space-between;
+  }
+  h5 {
+    color: $underScore;
+  }
+  p {
+    margin: 10px 0;
+    color: $highlightHeader;
+    line-height: 1.2rem;
+  }
+  a {
+    background-color: $underScore;
+    color: $background;
+    margin: 0 auto;
+    padding: 5px;
+  }
 }
 
 .prev,
@@ -64,23 +83,34 @@
   }
 }
 
-.mySlides {
-  .projectTitle {
+.projectSkills {
+  width: 350px;
+  height: 300px;
+}
+
+.imgPopOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .linksBox {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
   }
-  h5 {
-    color: $underScore;
-  }
-  p {
-    margin: 10px 0;
-    color: $highlightHeader;
-    line-height: 1.2rem;
-  }
-  a {
-    background-color: $underScore;
-    color: $background;
-    margin: 0 auto;
-    padding: 5px;
-  }
+}
+
+.projectSummary:hover {
+  opacity: 0;
+}
+.imgPopOut:hover {
+  opacity: 1;
 }
