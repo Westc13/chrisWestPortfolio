@@ -971,8 +971,6 @@ footer .footerText {
   .navTag {
     display: none;
   }
-}
-@media (max-width: 390px) {
   .hello {
     width: 90%;
   }
@@ -980,6 +978,8 @@ footer .footerText {
 .hello .helloProjectBox .helloProject3 {
     right: 0;
   }
+}
+@media (max-width: 390px) {
   .prev,
 .next {
     background-color: transparent;
