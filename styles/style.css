@@ -312,6 +312,7 @@ i {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -321,15 +322,17 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-color: #011627;
+  overflow-x: hidden;
 }
 
 .bodyWrapper {
   max-width: 1280px;
   width: 85%;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: #1E2D3D;
   margin-top: 20px;
   position: relative;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -490,9 +493,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #011627;
   border: 1px solid rgba(96, 123, 150, 0.7);
   padding: 20px;
@@ -548,7 +551,8 @@ body {
   padding: 30px;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 55%;
@@ -602,6 +606,9 @@ body {
     opacity: 1;
   }
 }
+.mySlides {
+  position: relative;
+}
 .mySlides .projectTitle {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -623,6 +630,44 @@ body {
   color: #011627;
   margin: 0 auto;
   padding: 5px;
+}
+
+.projectSkills {
+  width: 350px;
+  height: 300px;
+}
+
+.imgPopOut {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+}
+.imgPopOut img {
+  width: 100%;
+  height: 100%;
+}
+.imgPopOut .linksBox {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.projectSummary:hover {
+  opacity: 0;
+}
+
+.imgPopOut:hover {
+  opacity: 1;
 }
 
 .getInTouch {
@@ -945,6 +990,9 @@ footer .footerText {
   .prev,
 .next {
     background-color: transparent;
+  }
+  .projectSkills {
+    width: 85vw;
   }
   .footerFindMe {
     -webkit-box-orient: vertical;
