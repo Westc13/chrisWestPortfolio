@@ -330,7 +330,6 @@ body {
   width: 85%;
   margin: 20px auto;
   background-color: #1E2D3D;
-  margin-top: 20px;
   position: relative;
   overflow-x: hidden;
 }
@@ -407,7 +406,7 @@ body {
 }
 .hello .typewrite::after {
   content: "";
-  width: ipx;
+  width: 1px;
   border-right: 2px solid #E5E9F0;
   height: 100%;
   margin-left: 10px;
@@ -560,6 +559,20 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.mySlides h5 {
+  color: #FEA55F;
+}
+.mySlides p {
+  margin: 10px 0;
+  color: #E5E9F0;
+  line-height: 1.2rem;
+}
+.mySlides a {
+  background-color: #FEA55F;
+  color: #011627;
+  margin: 0 auto;
+  padding: 5px;
+}
 
 .prev,
 .next {
@@ -616,23 +629,6 @@ body {
     opacity: 1;
   }
 }
-h5 {
-  color: #FEA55F;
-}
-
-p {
-  margin: 10px 0;
-  color: #E5E9F0;
-  line-height: 1.2rem;
-}
-
-a {
-  background-color: #FEA55F;
-  color: #011627;
-  margin: 0 auto;
-  padding: 5px;
-}
-
 .projectSkills {
   width: 350px;
   height: 300px;
@@ -978,8 +974,6 @@ footer .footerText {
   .navTag {
     display: none;
   }
-}
-@media (max-width: 390px) {
   .hello {
     width: 90%;
   }
@@ -987,6 +981,8 @@ footer .footerText {
 .hello .helloProjectBox .helloProject3 {
     right: 0;
   }
+}
+@media (max-width: 390px) {
   .prev,
 .next {
     background-color: transparent;
