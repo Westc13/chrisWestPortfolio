@@ -13,7 +13,9 @@
   width: 45%;
   padding: 20px 0;
 }
-
+.fa-folder-open {
+  color: $underScore;
+}
 .profile {
   width: 50%;
   display: flex;
@@ -22,7 +24,7 @@
 .intro {
   margin-left: 10px;
   line-height: 1.2rem;
-}
-.intro p {
-  margin-bottom: 1rem;
+  p {
+    color: $comments;
+  }
 }
