@@ -1,113 +1,120 @@
-.slideshowContainer {
-  height: 100vh;
-  position: relative;
-  align-self: center;
+.featured-projects {
+  text-align: center;
+  padding: 20px 0;
+}
+.project-container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  background-color: $backgroundAccent;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 20px;
 }
 
-.slideshowContainer h2 {
-  font-size: 1.5rem;
-}
-
-.mySlides {
+.project {
+  width: 100%;
+  height: 450px;
   position: relative;
-  align-self: center;
-  display: none;
-  background-color: $background;
-  padding: 30px;
-  margin: 30px;
-  .projectTitle {
-    display: flex;
-    justify-content: space-between;
-  }
-  h5 {
-    color: $underScore;
-  }
-  p {
-    margin: 10px 0;
-    color: $highlightHeader;
-    line-height: 1.2rem;
-  }
-  a {
-    background-color: $underScore;
-    color: $background;
-    margin: 0 auto;
-    padding: 5px;
-  }
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
-.prev,
-.next {
+.flip-card {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
-  position: absolute;
-  top: 55%;
-  width: auto;
-  margin-top: -10px;
-  padding: 20px;
-  color: $highlightHeader;
-  background-color: $background;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: 0.6s ease;
-  user-select: none;
+  height: 400px;
+  perspective: 1000px;
+  position: relative;
+  width: 300px;
+  margin: 0 20px;
 }
 
-.next {
-  right: 0;
+.flip-card-inner {
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  width: 100%;
 }
 
-.prev:hover,
-.prev:focus,
-.next:hover,
-.next:focus {
-  background-color: $underScore;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.projectSkills {
-  width: 350px;
-  height: 300px;
-}
-
-.imgPopOut {
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  opacity: 0;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .linksBox {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-  }
+  width: 100%;
 }
 
-.projectSummary:hover {
-  opacity: 0;
+.flip-card-front {
+  transform: rotateY(0deg);
+  z-index: 1;
 }
-.imgPopOut:hover {
-  opacity: 1;
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.projectSummary {
+  height: 100%;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectSummary h2 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.projectSkills p {
+  margin: 0;
+}
+
+.linksBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linksBox a {
+  background-color: #333;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 45%;
+}
+
+.imgPopOut {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.imgPopOut img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
