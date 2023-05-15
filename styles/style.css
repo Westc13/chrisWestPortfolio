@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -633,64 +634,93 @@ body {
 .projectSummary {
   background-color: #0d1117;
   color: #c9d1d9;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
   padding: 20px;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .projectSummary h2 {
-  font-size: 18px;
+  margin-top: 0;
   margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.projectSummary p {
+  margin: 0;
+  font-size: 16px;
 }
 
 .projectDescription {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
 }
 
-.projectLanguages {
+.language {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
 }
 
-.projectLanguages img {
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
+.language img {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
 }
 
-.projectLanguages img:last-child {
-  margin-right: 0;
+.language p {
+  margin: 0;
+  font-size: 14px;
 }
 
-.projectLanguages img[title=HTML5] {
-  -webkit-filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
-          filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
+.star-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
 }
 
-.projectLanguages img[title=CSS3] {
-  -webkit-filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
-          filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
+.star-rating-front {
+  color: #f1c40f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
 
-.projectLanguages img[title=Git] {
-  -webkit-filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
-          filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
+.star-rating-back {
+  color: #c9d1d9;
 }
 
-.projectLanguages img[title=React] {
-  -webkit-filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
-          filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
+.star-rating-front::before {
+  content: "★★★★★";
 }
 
-.projectLanguages img[title=Firebase] {
-  -webkit-filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
-          filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg) brightness(94%) contrast(102%);
+.star-rating-back::before {
+  content: "★★★★★";
+}
+
+.star-rating-front span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.star-rating-front span::before {
+  content: "★★★★★";
+}
+
+.star-rating-back span::before {
+  content: "★★★★★";
 }
 
 .linksBox {
