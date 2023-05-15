@@ -32,10 +32,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  height: 400px;
+  height: 600px;
   perspective: 1000px;
   position: relative;
-  width: 300px;
+  width: 800px;
   margin: 0 20px;
 }
 
@@ -71,22 +71,63 @@
 }
 
 .projectSummary {
-  height: 100%;
-  padding: 30px;
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .projectSummary h2 {
-  font-size: 28px;
-  margin-bottom: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.projectSkills p {
-  margin: 0;
+.projectDescription {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.projectLanguages {
+  display: flex;
+}
+
+.projectLanguages img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.projectLanguages img:last-child {
+  margin-right: 0;
+}
+
+.projectLanguages img[title="HTML5"] {
+  filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg)
+    brightness(94%) contrast(102%);
+}
+
+.projectLanguages img[title="CSS3"] {
+  filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg)
+    brightness(94%) contrast(102%);
+}
+
+.projectLanguages img[title="Git"] {
+  filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg)
+    brightness(94%) contrast(102%);
+}
+
+.projectLanguages img[title="React"] {
+  filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg)
+    brightness(94%) contrast(102%);
+}
+
+.projectLanguages img[title="Firebase"] {
+  filter: invert(56%) sepia(23%) saturate(3441%) hue-rotate(157deg)
+    brightness(94%) contrast(102%);
 }
 
 .linksBox {
