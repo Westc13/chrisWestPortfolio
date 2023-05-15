@@ -20,7 +20,7 @@
 }
 
 .project {
-  width: 100%;
+  width: 800px;
   height: 450px;
   position: relative;
   perspective: 1000px;
@@ -32,6 +32,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  width: auto;
   height: 600px;
   perspective: 1000px;
   position: relative;
@@ -117,11 +118,17 @@
 }
 
 .star-rating-front {
-  color: #f1c40f;
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
-  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(
+      to right,
+      #ffc107 0%,
+      #ffc107 calc(100% * var(--rating))
+    ),
+    transparent calc(100% * var(--rating));
 }
 
 .star-rating-back {

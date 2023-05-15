@@ -567,7 +567,7 @@ body {
 }
 
 .project {
-  width: 100%;
+  width: 800px;
   height: 450px;
   position: relative;
   -webkit-perspective: 1000px;
@@ -584,6 +584,7 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  width: auto;
   height: 600px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
@@ -689,11 +690,13 @@ body {
 }
 
 .star-rating-front {
-  color: #f1c40f;
   position: absolute;
+  display: block;
   top: 0;
   left: 0;
-  overflow: hidden;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#ffc107), to(#ffc107)), transparent calc(100% * var(--rating));
+  background: linear-gradient(to right, #ffc107 0%, #ffc107 calc(100% * var(--rating))), transparent calc(100% * var(--rating));
 }
 
 .star-rating-back {
