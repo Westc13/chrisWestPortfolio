@@ -12,34 +12,6 @@ slideOutUl.addEventListener("click", function () {
   burgerBox.classList.toggle("active");
 });
 
-// Project slides carousel
-// learned from https://www.w3schools.com/howto/howto_js_slideshow.asp
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
-
 // Typerwriter effect learned from youtube
 // https://www.youtube.com/watch?v=9T4YTUeDgwU&t=8s
 function typeWriterEffect() {
@@ -90,3 +62,31 @@ function typeWriterEffect() {
   type();
 }
 typeWriterEffect();
+
+// Project slides carousel
+// learned from https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
